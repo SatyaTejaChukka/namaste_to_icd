@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  namaste-backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_PATH=/app/data/namaste_terminology.db
+    volumes:
+      - ./backend/data:/app/data
+    restart: unless-stopped
+
+  namaste-frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - namaste-backend
+    restart: unless-stopped

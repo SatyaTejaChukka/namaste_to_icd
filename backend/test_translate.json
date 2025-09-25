@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "system",
+      "valueUri": "http://ayush.namaste.gov.in/ayurveda"
+    },
+    {
+      "name": "code",
+      "valueCode": "AYU-SH-3.13"
+    },
+    {
+      "name": "target",
+      "valueUri": "http://id.who.int/icd/entity"
+    }
+  ]
+}
